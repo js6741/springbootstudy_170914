@@ -1,0 +1,22 @@
+package com.skcc.springbootstudy.test;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@RequestMapping(path="/test")
+public class TestController {
+	private TestService testService;
+	
+	public TestController(TestService testService1) {
+		this.testService = testService1;
+	}
+	
+	@RequestMapping(path="/string", method=RequestMethod.GET)
+	@ResponseBody
+	public String getString() {
+		return testService.getString();
+	}
+}

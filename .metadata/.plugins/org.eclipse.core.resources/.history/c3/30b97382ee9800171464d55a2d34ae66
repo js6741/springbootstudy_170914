@@ -1,0 +1,5 @@
+package com.skcc.springbootstudy.test;
+
+public class User {
+
+}

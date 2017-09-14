@@ -1,0 +1,18 @@
+package com.skcc.springbootstudy.user.dao;
+
+public interface UserMapper {
+	@Select("select * from users")
+	List<User> selectAll();
+	
+	@Select("select * from user where id = #{id}")
+	User selectById(int id);
+	
+	@Insert("insert int users(id, name, age) values #{id}, #{name}, #{age})")
+	int insert(User user);
+	
+	@Update("update users set name = #{name}, age=#{age} where id = #{id}")
+	int update(User user);
+	
+	@Delete("delete from users where id = #{id}")
+	int delete(int id);
+}

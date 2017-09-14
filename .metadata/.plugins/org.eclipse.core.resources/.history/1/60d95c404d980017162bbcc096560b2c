@@ -1,0 +1,11 @@
+package com.skcc.springbootstudy.test;
+
+@Service
+public class TestService2 implements TestService {
+
+	@Override
+	public String getString() {
+		return "TestService2";
+	}
+
+}

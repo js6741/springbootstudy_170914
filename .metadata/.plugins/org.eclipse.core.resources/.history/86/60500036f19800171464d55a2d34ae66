@@ -1,0 +1,30 @@
+package com.skcc.springbootstudy.user.dao;
+
+public class UserMapperTest {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    UserMapper userMapper;
+
+    @Test
+    public void test() {
+        User user = userMapper.selectById(0);
+        assert user.getName().equals("Rex");
+    }
+
+    @Test
+    public void test2() {
+        int count = userMapper.selectAll().size();
+
+        User user = new User(1, "Kim", 30);
+        userMapper.insert(user);
+
+        assert userMapper.selectById(1).getName().equals("Kim");
+
+        userMapper.delete(1);
+
+        assert userMapper.selectAll().size() == count;
+
+    }
+}

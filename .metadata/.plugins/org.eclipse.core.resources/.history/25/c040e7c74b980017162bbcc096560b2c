@@ -1,0 +1,5 @@
+management.security.enabled=false
+
+security.user.name = user
+security.user.password = pw
+

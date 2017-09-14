@@ -1,0 +1,16 @@
+package com.skcc.springbootstudy.test;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service
+public class TestService1 implements TestService {
+	
+	@Value("${test.string:Default String}")
+	private String string;
+	
+	@Override
+	public String getString() {
+		return string;
+	}
+}

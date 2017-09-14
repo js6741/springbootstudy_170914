@@ -1,0 +1,16 @@
+package com.skcc.springbootstudy.test;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class TestController {
+	private TestService testService;
+	
+	public TestController(TestService testService) {
+		this.testService = testService;
+	}
+	
+	public String getString() {
+		return testService.getString();
+	}
+}

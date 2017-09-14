@@ -1,0 +1,5 @@
+package com.skcc.springbootstudy.user.dao;
+
+public class UserMapperTest {
+
+}
